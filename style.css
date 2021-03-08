@@ -1,0 +1,1520 @@
+@charset "UTF-8";
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+.fade-in {
+  opacity: 0;
+  -webkit-transition-duration: 1500ms;
+          transition-duration: 1500ms;
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
+  transition-property: opacity, transform;
+  transition-property: opacity, transform, -webkit-transform;
+}
+
+.fade-in-up {
+  -webkit-transform: translate(0, 50px);
+          transform: translate(0, 50px);
+}
+
+.scroll-in {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+.storyMenuBox .scroll-in:nth-child(1) {
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+.storyMenuBox .scroll-in:nth-child(2) {
+  -webkit-transition-delay: .3s;
+          transition-delay: .3s;
+}
+
+.storyMenuBox .scroll-in:nth-child(3) {
+  -webkit-transition-delay: .6s;
+          transition-delay: .6s;
+}
+
+body {
+  min-width: 900px;
+  background-image: url(imageFile/bg.png);
+  background-attachment: fixed;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  width: 100%;
+  z-index: 4;
+}
+
+header a {
+  text-decoration: none;
+}
+
+header .headerLogo {
+  width: 500px;
+}
+
+header .icon-box {
+  top: 30px;
+  right: 110px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+}
+
+header .icon {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #FA301E;
+  color: #fff;
+  width: 70px;
+  height: 70px;
+  margin: 0 5px;
+  font-size: 25px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+header .icon:hover {
+  background-color: #000;
+}
+
+header .menuIcon {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+
+header .menuIcon span {
+  font-size: 10px;
+  letter-spacing: 3px;
+  margin-bottom: 5px;
+}
+
+header .btn-trigger {
+  position: relative;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+}
+
+header .btn-trigger span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+header .btn-trigger, header .btn-trigger span {
+  display: inline-block;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+header .btn-trigger span:nth-of-type(1) {
+  top: 0;
+}
+
+header .btn-trigger span:nth-of-type(2) {
+  top: 10px;
+}
+
+header .btn-trigger span:nth-of-type(3) {
+  top: 20px;
+}
+
+#btn02.active span:nth-of-type(1) {
+  -webkit-transform: translateY(20px) rotate(45deg);
+  transform: translateY(10px) rotate(45deg);
+}
+
+#btn02.active span:nth-of-type(2) {
+  opacity: 0;
+}
+
+#btn02.active span:nth-of-type(3) {
+  -webkit-transform: translateY(-20px) rotate(-45deg);
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+.title-inner {
+  position: relative;
+  top: 0;
+  left: 0;
+  padding: 300px 100px;
+  z-index: 0;
+}
+
+.titleDay,
+.Venue {
+  color: #fff;
+  font-family: 'Lato', sans-serif;
+}
+
+.titleDay {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.Venue {
+  font-size: 20px;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+.titleDaySpan {
+  font-size: 65px;
+}
+
+.titleWeekSpan {
+  font-size: 25px;
+}
+
+.titleTxtImage {
+  display: block;
+  margin-bottom: 50px;
+}
+
+.title::after {
+  width: 100%;
+  height: 100vh;
+  background: url(imageFile/kv.jpg) center/cover no-repeat;
+  mix-blend-mode: multiply;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.hanbergerMenu {
+  background-image: url(imageFile/nav-bg.png);
+  padding-bottom: 80%;
+  width: 0;
+  height: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  z-index: 3;
+}
+
+.hanbergerMenu.active {
+  width: 100%;
+}
+
+.hMenuWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 15% 3%;
+}
+
+.hMenuWrapper .hMenuDays {
+  white-space: nowrap;
+  margin-right: 5%;
+}
+
+.hMenuBoxWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.hMenuBoxWrapper a {
+  text-decoration: none;
+  padding: 20px 35px;
+}
+
+.hMenubox {
+  color: #fff;
+  font-weight: bold;
+  margin: 0px 15% 15% 0px;
+}
+
+.hMenuTitle {
+  font-size: 30px;
+}
+
+.hMenuSub {
+  font-size: 17px;
+}
+
+.Promotion {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.txtCard {
+  background-color: #000;
+  padding: 60px 40px;
+  margin-bottom: 40px;
+  display: inline-block;
+  position: relative;
+}
+
+.txtCard .PromotionMain,
+.txtCard .PromotionSub {
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.txtCard .PromotionMain {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 40px;
+  padding-bottom: 20px;
+}
+
+.txtCard .PromotionSub {
+  font-size: 17px;
+  line-height: 40px;
+}
+
+.cardBackTxt {
+  color: #1A1A1A;
+  text-align: left;
+  position: absolute;
+  bottom: -5px;
+  left: -3px;
+  font-size: 100px;
+  z-index: 0;
+  line-height: 80px;
+}
+
+.whyWrapper .whyTitle,
+.whyWrapper .whySubTitle {
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin-left: 10%;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.whyWrapper .whyTitle {
+  font-size: 35px;
+}
+
+.whyWrapper .whySubTitle {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.whyWrapper img {
+  display: block;
+  margin-right: auto;
+  width: 80%;
+}
+
+.whyWrapper .txtCardWrapper {
+  text-align: right;
+}
+
+.whyWrapper .PromotionSub {
+  text-align: left;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.whyWrapper .txtCard {
+  bottom: 20vh;
+  padding: 5%;
+  width: 70%;
+}
+
+.story {
+  text-align: center;
+}
+
+.story .storyMainTitle,
+.story .storySubTitle {
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.story .storyMainTitle {
+  font-size: 35px;
+}
+
+.story .storyTxt {
+  letter-spacing: 3px;
+  line-height: 25px;
+  margin: 20px 0;
+}
+
+.story .storyMainImage {
+  width: 100%;
+}
+
+.story .readMore0 {
+  background-color: #fff;
+  position: relative;
+  width: 600px;
+  padding: 30px 0;
+  margin: auto;
+  bottom: 30px;
+}
+
+.story .readMore0 .readMoreMain {
+  font-family: "Montserrat",sans-serif;
+  font-size: 25px;
+  padding-bottom: 10px;
+  letter-spacing: 3px;
+}
+
+.story .readMore0 .readMoreSub {
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.story .readMore0 .readMoreSpan {
+  position: absolute;
+  right: 20px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 1em;
+  height: 1em;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.story .readMore0 a {
+  text-decoration: none;
+  color: #000;
+}
+
+.story .storyMenuBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 100px 0;
+}
+
+.story .storyMenu1,
+.story .storyMenu2,
+.story .storyMenu3 {
+  background-image: url(imageFile/navi-casts.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  display: block;
+  width: 95%;
+  height: 40%;
+  padding: 80px 0;
+  color: #fff;
+  position: relative;
+  margin: 0 15px;
+}
+
+.story .storyMenu2 {
+  background-image: url(imageFile/navi-manga.jpg);
+}
+
+.story .storyMenu3 {
+  background-image: url(imageFile/navi-comments.jpg);
+}
+
+.story .storyMenuTitle {
+  font-size: 45px;
+  letter-spacing: 5px;
+  margin-bottom: 10px;
+}
+
+.story .storyMenuSubTitle {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.story .storyMenuTxt {
+  font-size: 15px;
+  line-height: 25px;
+}
+
+.story .readMore1 {
+  background-color: #fff;
+  position: relative;
+  width: 300px;
+  margin: auto;
+  padding: 20px 0;
+  bottom: 30px;
+}
+
+.story .readMore1 .readMoreMain {
+  font-family: "Montserrat",sans-serif;
+  font-size: 20px;
+  padding-bottom: 5px;
+  letter-spacing: 3px;
+}
+
+.story .readMore1 .readMoreSub {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.story .readMore1 .readMoreSpan {
+  position: absolute;
+  right: 20px;
+  top: 0;
+  bottom: 0;
+  width: 1em;
+  height: 1em;
+  margin: auto;
+}
+
+.story .readMore1 a {
+  text-decoration: none;
+  color: #000;
+}
+
+.news {
+  margin: 30px 0;
+}
+
+.news .newsTitleWrapper {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.news .newsTitle {
+  font-size: 35px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.news .newsSubTitle {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.news .newsMenuWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.news .newsMenuWrapper a {
+  display: contents;
+}
+
+.news .newsMenu1,
+.news .newsMenu2,
+.news .newsMenu3 {
+  display: inline-block;
+  margin: 0 10px;
+  width: 30%;
+  max-width: 370px;
+  height: 500px;
+  z-index: 0;
+  position: relative;
+  color: #fff;
+}
+
+.news .newsMenu1 {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.news .newsMenu2 {
+  background-image: url(imageFile/img1-440x580.jpg);
+}
+
+.news .newsMenu3 {
+  background-image: url(imageFile/mb-440x580.png);
+}
+
+.news .newsMenu2::before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.news .newsMenu3::before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.news .newsMenuTxtTop,
+.news .newsMenuTxtBtm {
+  position: absolute;
+  display: inline-block;
+  font-weight: bold;
+  width: 80%;
+  left: 40px;
+}
+
+.news .newsMenuTxtTop {
+  top: 40px;
+}
+
+.news .newsMenuTxtBtm {
+  bottom: 40px;
+}
+
+.readMoresingle {
+  margin: 100px 0;
+}
+
+.readMoresingle .readMore0 {
+  background-color: #fff;
+  position: relative;
+  width: 600px;
+  padding: 30px 0;
+  margin: auto;
+  bottom: 30px;
+  top: 0;
+  text-align: center;
+}
+
+.readMoresingle .readMore0 .readMoreMain {
+  font-family: "Montserrat",sans-serif;
+  font-size: 25px;
+  padding-bottom: 10px;
+  letter-spacing: 3px;
+}
+
+.readMoresingle .readMore0 .readMoreSub {
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.readMoresingle .readMore0 .readMoreSpan {
+  position: absolute;
+  right: 20px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 1em;
+  height: 1em;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.readMoresingle .readMore0 a {
+  text-decoration: none;
+  color: #000;
+}
+
+.bProjectWrapper {
+  background-color: #1F54CE;
+  color: #fff;
+  width: 75%;
+  max-width: 1200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 200px auto;
+  padding: 60px;
+}
+
+.bProjectWrapper .bProjectImage {
+  padding-right: 30px;
+}
+
+.bProjectWrapper .bpTxtMain {
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.bProjectWrapper .bpTxtSub {
+  font-size: 18px;
+  line-height: 35px;
+  letter-spacing: 1px;
+}
+
+footer {
+  padding: 80px 0;
+  background-color: #000;
+}
+
+footer .footerWrapper {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .footerWrapper .footerTitle {
+  line-height: 25px;
+}
+
+footer .footerWrapper .footerTitle1 {
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+footer .footerWrapper .footerTitle2 {
+  margin: 10px 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+footer .footerWrapper .footerContact {
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: 1px;
+}
+
+footer .footerWrapper .contactLink,
+footer .footerWrapper small {
+  padding-right: 40px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+footer .footerWrapper .contactLink {
+  font-size: 15px;
+  display: inline-block;
+  margin: 30px 0;
+}
+
+footer .footerWrapper small {
+  font-size: 12px;
+  display: block;
+  letter-spacing: 1px;
+}
+
+.commonHead {
+  position: relative;
+}
+
+.commonHead .commonMainImg {
+  width: 100%;
+  mix-blend-mode: multiply;
+}
+
+.commonHead .commonTitleWrapper {
+  position: relative;
+  bottom: 200px;
+}
+
+.commonHead .commonTitleWrapper .commonTitle,
+.commonHead .commonTitleWrapper .commonTitleSub {
+  text-align: center;
+  font-family: 'Noto Sans', sans-serif;
+  color: #fff;
+}
+
+.commonHead .commonTitle {
+  font-size: 60px;
+  letter-spacing: 10px;
+}
+
+.commonHead .commonTitleSub {
+  font-size: 20px;
+  letter-spacing: 8px;
+  font-weight: bold;
+}
+
+.commonHead::before {
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 83px;
+  left: 0;
+  content: '';
+}
+
+.commonTxtCardWrapper {
+  text-align: center;
+}
+
+.commonTxtCard {
+  background-color: #000;
+  width: 80vh;
+  padding: 70px 0;
+  display: inline-block;
+  position: relative;
+  bottom: 120px;
+}
+
+.commonTxtCard .commonTxtCardInner {
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 17px;
+  line-height: 40px;
+}
+
+.whyWrapper2 .whyTitle,
+.whyWrapper2 .whySubTitle {
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin-left: 18%;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.whyWrapper2 .whyTitle {
+  font-size: 35px;
+}
+
+.whyWrapper2 .whySubTitle {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.whyWrapper2 img {
+  display: block;
+  margin-left: auto;
+  width: 80%;
+}
+
+.whyWrapper2 .txtCardWrapper {
+  text-align: left;
+}
+
+.whyWrapper2 .PromotionSub {
+  text-align: left;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.whyWrapper2 .txtCard {
+  bottom: 20vh;
+  padding: 5%;
+  width: 70%;
+}
+
+.promotionSpecial {
+  text-align: center;
+  color: #fff;
+  font-size: 23px;
+  font-family: 'Shippori Mincho', serif;
+  line-height: 50px;
+  padding: 10% 0;
+  position: relative;
+}
+
+.promotionSpecial::before,
+.promotionSpecial::after {
+  content: ' " ';
+  color: #fff;
+  font-size: 50px;
+}
+
+.promotionSpecial::before {
+  position: absolute;
+  top: 20%;
+  left: 28%;
+}
+
+.promotionSpecial::after {
+  position: absolute;
+  bottom: 13%;
+  right: 30%;
+}
+
+.actor {
+  width: 90%;
+  max-width: 1180px;
+  margin: 0 auto 60px;
+}
+
+.actor .actorTitleWrapper {
+  margin-bottom: 40px;
+}
+
+.actor .actorTitleWrapper .actorTitle,
+.actor .actorTitleWrapper .actorSubTitle {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.actor .actorTitleWrapper .actorTitle {
+  font-size: 40px;
+  letter-spacing: 5px;
+}
+
+.actor .actorTitleWrapper .actorSubTitle {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-top: 10px;
+}
+
+.actor .actorArticle {
+  display: block;
+}
+
+.actor .actorArticle .actorBoxMenu {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+
+.actor .actorArticle .actorBoxMenu .actorImg img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 100%;
+}
+
+.actor .actorArticle .actorBoxMenu .actorBox {
+  width: 32%;
+  margin: 0 2% 5% 0;
+  position: relative;
+}
+
+.actor .actorArticle .actorBoxMenu .actorBox:nth-of-type(3n) {
+  margin-right: 0;
+}
+
+.actor .actorArticle .actorBoxMenu .actorTxtBox {
+  max-width: 90%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #fff;
+  -webkit-filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.2));
+          filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.2));
+  margin: -30px auto;
+  padding: 10% 5%;
+}
+
+.actor .actorArticle .actorBoxMenu .actorTxtBox .actorRole,
+.actor .actorArticle .actorBoxMenu .actorTxtBox .actorName,
+.actor .actorArticle .actorBoxMenu .actorTxtBox .actorBirthPlace {
+  font-family: 'Noto Sans', sans-serif;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.actor .actorArticle .actorBoxMenu .actorTxtBox .actorRole {
+  font-size: .9375rem;
+  font-weight: 600;
+}
+
+.actor .actorArticle .actorBoxMenu .actorTxtBox .actorName {
+  font-size: 1.375rem;
+  margin: 10px auto 12px;
+}
+
+.actor .actorArticle .actorBoxMenu .actorTxtBox .actorBirthPlace {
+  color: #7E7E7E;
+  font-size: .8125rem;
+  margin-bottom: 22px;
+}
+
+.actor .actorArticle .actorBoxMenu .actorTxtBox .actorTxtSubBox .actorButton {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 3% 0;
+  border-radius: 5px;
+  margin-top: 15px;
+  position: relative;
+}
+
+.actor .actorArticle .actorBoxMenu .actorTxtBox .actorTxtSubBox .actorButton .actorButtonTxt::before {
+  width: 100%;
+  top: 50%;
+  font-weight: 600;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  content: '詳細はこちら';
+}
+
+.actor .actorArticle .actorBoxMenu .actorTxtBox .actorTxtSubBox .actorButton .actorButtonTxt:after {
+  content: "\f107";
+  font-weight: 600;
+  font-family: 'Font Awesome 5 Free';
+  position: absolute;
+  right: 10%;
+  top: 20%;
+  font-size: 20px;
+}
+
+.actor .actorArticle .actorBoxMenu .actorTxtBox .actorTxtSubBox .actorButton .actorButtonTxt.abOpen:before {
+  content: '詳細を閉じる';
+}
+
+.actor .actorArticle .actorBoxMenu .actorTxtBox .actorTxtSubBox .actorButton .actorButtonTxt.abOpen:after {
+  -webkit-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
+
+.actor .actorArticle .actorBoxMenu .actprTxt,
+.actor .actorArticle .actorBoxMenu .actorTxtSub {
+  letter-spacing: 1px;
+  line-height: 25px;
+}
+
+.actor .actorArticle .actorBoxMenu .actorTxtSub {
+  padding-top: 15px;
+}
+
+.comment {
+  margin-bottom: 40px;
+}
+
+.comment .commentHeadImg {
+  width: 40%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.comment .commentHeadImg img {
+  width: 100%;
+}
+
+.comment .cmtHeadCard {
+  color: #fff;
+  background-color: #000;
+  width: 80%;
+  padding: 7%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 350px;
+  margin-left: -21%;
+}
+
+.comment .cmtHeadCard .cmtHeadRole {
+  font-size: 20px;
+}
+
+.comment .cmtHeadCard .cmtHeadName {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 20px 0;
+  letter-spacing: 5px;
+}
+
+.comment .cmtHeadCard .cmtHeadTxt {
+  letter-spacing: 1px;
+  line-height: 35px;
+  font-size: 18px;
+}
+
+.comment .cmtCardWrapper {
+  width: 80%;
+  max-width: 1300px;
+  margin: 60px auto;
+}
+
+.comment .cmtCardWrapper .cmtCardBox {
+  width: 100%;
+}
+
+.comment .cmtCardWrapper .cmtCardBox .cmtCardMenu {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.comment .cmtCardWrapper .cmtCardBox .cmtCardMenu .cmtCard {
+  background-color: #fff;
+  padding: 2%;
+  width: 32%;
+  list-style: none;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.comment .cmtCardWrapper .cmtCardBox .cmtCardMenu .cmtCard .cmtCardRole,
+.comment .cmtCardWrapper .cmtCardBox .cmtCardMenu .cmtCard .cmtCardName {
+  text-align: center;
+}
+
+.comment .cmtCardWrapper .cmtCardBox .cmtCardMenu .cmtCard .cmtCardRole {
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 25px;
+}
+
+.comment .cmtCardWrapper .cmtCardBox .cmtCardMenu .cmtCard .cmtCardName {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 20px 0;
+}
+
+.comment .cmtCardWrapper .cmtCardBox .cmtCardMenu .cmtCard .cmtCardTxt {
+  font-size: 15px;
+  line-height: 25px;
+}
+
+.comment .cmtCardWrapper .cmtCardBox .cmtCardMenu .cmtCard:nth-of-type(3n) {
+  margin-right: 0;
+}
+
+.manga .mangaBoxWrapper {
+  width: 85%;
+  max-width: 1300px;
+  margin: 0 auto 120px;
+}
+
+.manga .mangaBoxWrapper .mangaTable {
+  width: 100%;
+}
+
+.manga .mangaBoxWrapper .mangaTable .mangaBox {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  list-style: none;
+}
+
+.manga .mangaBoxWrapper .mangaTable .mangaBox .mangaList {
+  width: 32%;
+  margin: 0 2% 5% 0;
+}
+
+.manga .mangaBoxWrapper .mangaTable .mangaBox .mangaList .mangaImgWrapper {
+  width: 100%;
+}
+
+.manga .mangaBoxWrapper .mangaTable .mangaBox .mangaList .mangaImgWrapper img {
+  width: 100%;
+}
+
+.manga .mangaBoxWrapper .mangaTable .mangaBox .mangaList .mangaCardWrapper {
+  width: 90%;
+  margin: -10% auto;
+  background-color: #fff;
+  padding: 8% 5%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.2));
+          filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.2));
+}
+
+.manga .mangaBoxWrapper .mangaTable .mangaBox .mangaList .mangaCardWrapper .mangaVol,
+.manga .mangaBoxWrapper .mangaTable .mangaBox .mangaList .mangaCardWrapper .mangaTitle {
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.manga .mangaBoxWrapper .mangaTable .mangaBox .mangaList .mangaCardWrapper .mangaVol {
+  font-size: 15px;
+}
+
+.manga .mangaBoxWrapper .mangaTable .mangaBox .mangaList .mangaCardWrapper .mangaTitle {
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+.manga .mangaBoxWrapper .mangaTable .mangaBox .mangaList .mangaCardWrapper .mangaTxt {
+  font-size: 15px;
+  line-height: 30px;
+}
+
+.manga .mangaBoxWrapper .mangaTable .mangaBox .mangaList .mangaCardWrapper .mangaButton {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 3% 0;
+  border-radius: 5px;
+  margin-top: 15px;
+  position: relative;
+}
+
+.manga .mangaBoxWrapper .mangaTable .mangaBox .mangaList .mangaCardWrapper .mangaButton .mangaButtonTxt::before {
+  width: 100%;
+  top: 50%;
+  font-weight: 600;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  content: '詳しく見る';
+}
+
+.manga .mangaBoxWrapper .mangaTable .mangaBox .mangaList .mangaCardWrapper .mangaButton .mangaButtonTxt:after {
+  content: "\f105";
+  font-weight: 600;
+  font-family: 'Font Awesome 5 Free';
+  position: absolute;
+  right: 10%;
+  top: 20%;
+  font-size: 20px;
+}
+
+.manga .mangaBoxWrapper .mangaTable .mangaBox .mangaList:nth-of-type(3n) {
+  margin: 0 0 2% 0;
+}
+
+.news {
+  width: 85%;
+  max-width: 1200px;
+  margin: 150px auto;
+}
+
+.news .newsWrapper {
+  width: 100%;
+}
+
+.news .newsWrapper .newsNav {
+  width: 100%;
+}
+
+.news .newsWrapper .newsNav .newsBox {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.news .newsWrapper .newsNav .newsBox a {
+  display: contents;
+}
+
+.news .newsWrapper .newsNav .newsBox .newsCard {
+  width: 32%;
+  margin: 0 2% 2% 0;
+  position: relative;
+  background-color: #000;
+  -webkit-filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.2));
+          filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.2));
+}
+
+.news .newsWrapper .newsNav .newsBox .newsCard .newsImg {
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+}
+
+.news .newsWrapper .newsNav .newsBox .newsCard .nCardTxtDay,
+.news .newsWrapper .newsNav .newsBox .newsCard .nCardTxtTitle {
+  color: #fff;
+  position: absolute;
+  padding: 25px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  line-height: 20px;
+}
+
+.news .newsWrapper .newsNav .newsBox .newsCard .nCardTxtDay {
+  top: 0;
+  left: 0;
+}
+
+.news .newsWrapper .newsNav .newsBox .newsCard .nCardTxtTitle {
+  bottom: 0;
+  right: 0;
+}
+
+.news .newsWrapper .newsNav .newsBox .newsCard:nth-of-type(3n) {
+  margin: 0 0 2% 0;
+}
+
+.news .newsWrapper .newsNav .newsBox .newsCard:nth-of-type(1) {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.news .newsWrapper .newsNav .newsBox .newsCard:nth-of-type(1) .newsImg {
+  visibility: hidden;
+}
+
+.contact {
+  width: 80%;
+  max-width: 1300px;
+  margin: 100px auto;
+}
+
+.contact .contactWrapper,
+.contact .contactIn,
+.contact .contactTitle,
+.contact .contactSendBtn {
+  width: 100%;
+}
+
+.contact .contactIn,
+.contact .contactSendBtn {
+  margin-bottom: 60px;
+}
+
+.contact .contactTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 30px 0;
+}
+
+.contact .contactTitle .contactMandatory {
+  color: #fff;
+  background-color: #F75A53;
+  font-size: 10px;
+  padding: 6px 10px;
+}
+
+.contact .contactTitleName {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.contact .contactTxtInput {
+  width: 100%;
+  height: 50px;
+  border: none;
+  padding: 0;
+}
+
+.contact .cPurpose .contactTitleName,
+.contact .cContent .contactTitleName {
+  margin: 30px 0;
+}
+
+.contact .cPurpose label,
+.contact .cContent label {
+  margin-right: 50px;
+}
+
+.contact .cPurpose label span,
+.contact .cContent label span {
+  font-weight: bold;
+}
+
+.contact .cPurpose .contactRadioInput {
+  margin: 10px;
+}
+
+.contact .cContent .contactTxtInput {
+  height: 200px;
+}
+
+.contact .contactSendBtn {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 20px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.contact .contactSendBtn:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.archives {
+  width: 70%;
+  max-width: 1200px;
+  margin: 0 auto 200px;
+}
+
+.archives .archivesWrapper {
+  width: 100%;
+}
+
+.archives .archivesWrapper .archivesImg {
+  width: 100%;
+}
+
+.archives .archivesWrapper .archivesCard {
+  width: 90%;
+  margin: -100px auto;
+  padding: 5%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #fff;
+  color: #000;
+  -webkit-filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.2));
+          filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.2));
+}
+
+.archives .archivesWrapper .archivesCard .archivesTitle,
+.archives .archivesWrapper .archivesCard .archivesTxt,
+.archives .archivesWrapper .archivesCard .archivesThen {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.archives .archivesWrapper .archivesCard .archivesTitle {
+  font-size: 1.75rem;
+  text-align: center;
+  padding: 3% 0;
+}
+
+.archives .archivesWrapper .archivesCard .archivesTxt,
+.archives .archivesWrapper .archivesCard .archivesThen {
+  line-height: 25px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.archives .archivesWrapper .archivesCard .archivesThen {
+  margin: 20px 0;
+  text-align: right;
+}
+/*# sourceMappingURL=style.css.map */

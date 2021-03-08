@@ -1,0 +1,1291 @@
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;  
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+
+
+
+
+
+
+
+.fade-in {
+    opacity: 0;
+    transition-duration: 1500ms;
+    transition-property: opacity, transform;
+  }
+
+  .fade-in-up {
+    transform: translate(0, 50px);
+  }
+
+  .scroll-in {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+
+  .storyMenuBox .scroll-in:nth-child(1) {
+    transition-delay: 0s;
+  }
+  .storyMenuBox .scroll-in:nth-child(2) {
+    transition-delay: .3s;
+  }
+  .storyMenuBox .scroll-in:nth-child(3) {
+    transition-delay: .6s;
+  }
+
+
+
+body {
+    min-width: 900px;
+    background-image: url(imageFile/bg.png);
+    background-attachment: fixed;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 4;
+    a {
+        text-decoration: none;
+    }
+    .headerLogo {
+        width: 500px;
+    }
+    .icon-box {
+        top: 30px;
+        right: 110px;
+        display: flex;
+        position: absolute;
+    }
+    .icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #FA301E;
+        color: #fff;
+        width: 70px;
+        height: 70px;
+        margin: 0 5px;
+        font-size: 25px;
+        transition: all .3s;
+    }
+    .icon:hover{
+        background-color: #000;
+    }
+    .menuIcon {
+        flex-direction: column;
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        span {
+            font-size: 10px;
+            letter-spacing: 3px;
+            margin-bottom: 5px;
+        }
+    }
+    .btn-trigger {
+        position: relative;
+        width: 30px;
+        height: 25px;
+        cursor: pointer;
+      }
+      .btn-trigger span {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background-color: #fff;
+        border-radius: 4px;
+      }
+      .btn-trigger, .btn-trigger span {
+        display: inline-block;
+        transition: all .2s;
+        box-sizing: border-box;
+      }
+      .btn-trigger span:nth-of-type(1) {
+        top: 0;
+      }
+      .btn-trigger span:nth-of-type(2) {
+        top: 10px;
+      }
+      .btn-trigger span:nth-of-type(3) {
+        top: 20px;
+      }
+}
+
+//activeクラスがあった場合、3本線が動く
+#btn02.active span:nth-of-type(1) {
+  -webkit-transform: translateY(20px) rotate(45deg);
+  transform: translateY(10px) rotate(45deg);
+}
+#btn02.active span:nth-of-type(2) {
+  opacity: 0;
+}
+#btn02.active span:nth-of-type(3) {
+  -webkit-transform: translateY(-20px) rotate(-45deg);
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+.title-inner {
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 300px 100px;
+    z-index: 0;
+}
+
+
+    .titleDay,
+    .Venue {
+        color: #fff;
+        font-family: 'Lato', sans-serif;
+    }
+    .titleDay {
+        font-size: 40px;
+        margin-bottom: 10px;
+    }
+    .Venue {
+        font-size: 20px;
+        margin-bottom: 40px;
+        font-weight: bold;
+    }
+    .titleDaySpan {
+        font-size: 65px;
+    }
+    .titleWeekSpan {
+        font-size: 25px;
+    }
+    .titleTxtImage {
+        display: block;
+        margin-bottom: 50px;
+    }
+
+.title::after{
+    width: 100%;
+    height: 100vh;
+    background: url(imageFile/kv.jpg) center/cover no-repeat;
+    mix-blend-mode: multiply;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.hanbergerMenu {
+    background-image: url(imageFile/nav-bg.png);
+    padding-bottom: 80%;
+    width: 0;
+    height: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+    transition: 0.3s;
+    z-index: 3;
+}
+.hanbergerMenu.active {
+    width: 100%;
+}
+
+.hMenuWrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 15% 3%;
+    .hMenuDays {
+        white-space: nowrap;
+        margin-right: 5%;
+    }
+}
+.hMenuBoxWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    a {
+        text-decoration: none;
+        padding: 20px 35px;
+    }
+}
+.hMenubox {
+    color: #fff;
+    font-weight: bold;
+    margin: 0px 15% 15% 0px;
+}
+.hMenuTitle {
+    font-size: 30px;
+}
+.hMenuSub {
+    font-size: 17px;
+}
+
+
+
+.Promotion {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.txtCard {
+    background-color: #000;
+    padding: 60px 40px;
+    margin-bottom: 40px;
+    display: inline-block;
+    position: relative;
+    .PromotionMain,
+    .PromotionSub {
+        color: #fff;
+        position: relative;
+        z-index: 1;
+        font-family: 'Noto Sans', sans-serif;
+    }
+    .PromotionMain {
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 40px;
+        padding-bottom: 20px;
+    }
+    .PromotionSub {
+        font-size: 17px;
+        line-height: 40px;
+    }
+}
+
+.cardBackTxt {
+    color: #1A1A1A;
+    text-align: left;
+    position: absolute;
+    bottom: -5px;
+    left: -3px;
+    font-size: 100px;
+    z-index: 0;
+    line-height: 80px;
+}
+
+.whyWrapper {
+    .whyTitle,
+    .whySubTitle {
+        font-weight: bold;
+        letter-spacing: 3px;
+        margin-left: 10%;
+        font-family: 'Noto Sans', sans-serif;
+    }
+    .whyTitle {
+        font-size: 35px;
+    }
+    .whySubTitle {
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+    img {
+        display: block;
+        margin-right: auto;
+        width: 80%;
+    }
+    .txtCardWrapper {
+        text-align: right;
+    }
+    .PromotionSub {
+        text-align: left;
+        font-family: 'Noto Sans', sans-serif;
+
+    }
+    .txtCard {
+        bottom: 20vh;
+        padding: 5%;
+        width: 70%;
+    }
+}
+
+
+
+//もっと見るボタン大きいサイズ
+@mixin ReadMoreButton0 {
+    background-color: #fff;
+    position: relative;
+    width: 600px;
+    padding: 30px 0;
+    margin: auto;
+    bottom: 30px;
+    .readMoreMain {
+        font-family: "Montserrat",sans-serif;
+        font-size: 25px;
+        padding-bottom: 10px;
+        letter-spacing: 3px;
+    }
+    .readMoreSub {
+        font-size: 17px;
+        font-weight: bold;
+    }
+    .readMoreSpan {
+        position: absolute;
+        right: 20px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: 1em;
+        height: 1em;
+        font-weight: bold;
+        font-size: 17px;
+    }
+}
+
+//もっと見るボタン小さいサイズ
+@mixin ReadMoreButton1 {
+    background-color: #fff;
+    position: relative;
+    width: 300px;
+    margin: auto;
+    padding: 20px 0;
+    bottom: 30px;
+    .readMoreMain {
+        font-family: "Montserrat",sans-serif;
+        font-size: 20px;
+        padding-bottom: 5px;
+        letter-spacing: 3px;
+    }
+    .readMoreSub {
+        font-size: 15px;
+        font-weight: bold;
+    }
+    .readMoreSpan {
+        position: absolute;
+        right: 20px;
+        top: 0;
+        bottom: 0;
+        width: 1em;
+        height: 1em;
+        margin: auto;
+    }
+}
+
+
+
+.story {
+    text-align: center;
+    .storyMainTitle,
+    .storySubTitle {
+        font-weight: bold;
+        letter-spacing: 3px;
+        margin-bottom: 10px;
+        font-family: 'Noto Sans', sans-serif;
+
+    }
+    .storyMainTitle {
+        font-size: 35px;
+    }
+    .storyTxt {
+        letter-spacing: 3px;
+        line-height: 25px;
+        margin: 20px 0;
+    }
+
+    .storyMainImage {
+        width: 100%;
+    }
+    .readMore0 {
+        @include ReadMoreButton0;
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+    }
+
+    .storyMenuBox {
+        display: flex;
+        justify-content: center;
+        margin: 100px 0;
+    }
+
+    .storyMenu1,
+    .storyMenu2,
+    .storyMenu3 {
+        background-image: url(imageFile/navi-casts.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        display: block;
+        width: 95%;
+        height: 40%;
+        padding: 80px 0;
+        color: #fff;
+        position: relative;
+        margin: 0 15px;
+    }
+    .storyMenu2 {
+        background-image: url(imageFile/navi-manga.jpg);
+    }
+    .storyMenu3 {
+        background-image: url(imageFile/navi-comments.jpg);
+    }
+    .storyMenuTitle {
+        font-size: 45px;
+        letter-spacing: 5px;
+        margin-bottom: 10px;
+    }
+    .storyMenuSubTitle {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    .storyMenuTxt {
+        font-size: 15px;
+        line-height: 25px;
+    }
+    .readMore1 {
+        @include ReadMoreButton1;
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+    }
+}
+
+.news {
+    margin: 30px 0;
+    .newsTitleWrapper {
+        text-align: center;
+        padding: 20px 0;
+    }
+    .newsTitle {
+        font-size: 35px;
+        margin-bottom: 10px;
+        font-weight: bold;
+        font-family: 'Noto Sans', sans-serif;
+    }
+    .newsSubTitle {
+        font-size: 20px;
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+    .newsMenuWrapper {
+        display: flex;
+        justify-content: center;
+        a {
+            display: contents;
+        }
+    }
+    .newsMenu1,
+    .newsMenu2,
+    .newsMenu3 {
+        display: inline-block;
+        margin: 0 10px;
+        width: 30%;
+        max-width: 370px;
+        height: 500px;
+        z-index: 0;
+        position: relative;
+        color: #fff;
+    }
+    .newsMenu1 {
+        background-color: rgba($color: #000000, $alpha: 0.3);
+    }
+    .newsMenu2 {
+        background-image: url(imageFile/img1-440x580.jpg);
+    }
+    .newsMenu3 {
+        background-image: url(imageFile/mb-440x580.png);
+    }
+
+    .newsMenu2::before {
+        content: "";
+        background-color: rgba(0,0,0,.5);
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    .newsMenu3::before {
+        content: "";
+        background-color: rgba(0,0,0,.5);
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    .newsMenuTxtTop,
+    .newsMenuTxtBtm {
+        position: absolute;
+        display: inline-block;
+        font-weight: bold;
+        width: 80%;
+        left: 40px;
+    }
+    .newsMenuTxtTop {
+        top: 40px;
+    }
+    .newsMenuTxtBtm {
+        bottom: 40px;
+    }
+}
+.readMoresingle {
+    margin: 100px 0;
+    .readMore0 {
+        @include ReadMoreButton0;
+        top: 0;
+        text-align: center;
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+    }
+}
+
+.bProjectWrapper {
+    background-color: #1F54CE;
+    color: #fff;
+    width: 75%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    margin: 200px auto;
+    padding: 60px;
+    .bProjectImage {
+        padding-right: 30px;
+    }
+    .bpTxtMain {
+       font-weight: bold;
+       margin-bottom: 20px; 
+       font-size: 20px;
+    }
+    .bpTxtSub {
+        font-size: 18px;
+        line-height: 35px;
+        letter-spacing: 1px;
+    }
+}
+
+footer {
+    padding: 80px 0;
+    background-color: #000;
+    .footerWrapper {
+        width: 80%;
+        max-width: 1200px;
+        margin: 0 auto;
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .footerTitle {
+            line-height: 25px;
+        }
+        .footerTitle1 {
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        .footerTitle2 {
+            margin: 10px 0;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .footerContact {
+            font-size: 15px;
+            line-height: 25px;
+            letter-spacing: 1px;
+        }
+        .contactLink,
+        small {
+            padding-right: 40px;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+        }
+        .contactLink {
+            font-size: 15px;
+            display: inline-block;
+            margin: 30px 0;
+        }
+        small {
+            font-size: 12px;
+            display: block;
+            letter-spacing: 1px;
+        }
+    }
+}
+
+// 共通タイトル部分ここから
+.commonHead {
+    position: relative;
+    
+    .commonMainImg {
+        width: 100%;
+        mix-blend-mode: multiply;
+    }
+    .commonTitleWrapper {
+        position: relative;
+        bottom: 200px;
+
+        .commonTitle,
+        .commonTitleSub {
+            text-align: center;
+            font-family: 'Noto Sans', sans-serif;
+            color: #fff;
+        }
+    }
+    .commonTitle {
+        font-size: 60px;
+        letter-spacing: 10px;
+    }
+    .commonTitleSub {
+        font-size: 20px;
+        letter-spacing: 8px;
+        font-weight: bold;
+    }
+}
+.commonHead::before {
+    background-color: rgba(0,0,0,0.4);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 83px;
+    left: 0;
+    content: '';
+}
+
+.commonTxtCardWrapper {
+    text-align: center;
+}
+.commonTxtCard {
+    background-color: #000;
+    width: 80vh;
+    padding: 70px 0;
+    display: inline-block;
+    position: relative;
+    bottom: 120px;
+    .commonTxtCardInner {
+        color: #fff;
+        position: relative;
+        z-index: 1;
+        font-family: 'Noto Sans', sans-serif;
+        font-size: 17px;
+        line-height: 40px;
+    }
+}
+// 共通タイトル部分ここまで
+
+
+.whyWrapper2 {
+    .whyTitle,
+    .whySubTitle {
+        font-weight: bold;
+        letter-spacing: 3px;
+        margin-left: 18%;
+        font-family: 'Noto Sans', sans-serif;
+    }
+    .whyTitle {
+        font-size: 35px;
+    }
+    .whySubTitle {
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+    img {
+        display: block;
+        margin-left: auto;
+        width: 80%;
+    }
+    .txtCardWrapper {
+        text-align: left;
+    }
+    .PromotionSub {
+        text-align: left;
+        font-family: 'Noto Sans', sans-serif;
+
+    }
+    .txtCard {
+        bottom: 20vh;
+        padding: 5%;
+        width: 70%;
+    }
+}
+
+.promotionSpecial {
+    text-align: center;
+    color: #fff;
+    font-size: 23px;
+    font-family: 'Shippori Mincho', serif;
+    line-height: 50px;
+    padding: 10% 0;
+    position: relative;
+}
+.promotionSpecial::before,
+.promotionSpecial::after {
+    content: ' " ';
+    color: #fff;
+    font-size: 50px;
+}
+.promotionSpecial::before {
+    position: absolute;
+    top: 20%;
+    left: 28%;
+}
+.promotionSpecial::after {
+    position: absolute;
+    bottom: 13%;
+    right: 30%;
+}
+
+.actor {
+    width: 90%;
+    max-width: 1180px;
+    margin: 0 auto 60px;
+
+    .actorTitleWrapper {
+        margin-bottom: 40px;
+        
+        .actorTitle,
+        .actorSubTitle {
+            font-family: 'Noto Sans', sans-serif;
+        }
+        .actorTitle {
+            font-size: 40px;
+            letter-spacing: 5px;
+        }
+        .actorSubTitle {
+            display: block;
+            font-size: 18px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-top: 10px;
+        }
+    }
+
+    .actorArticle {
+        display: block;
+
+        .actorBoxMenu {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 60px;
+
+            .actorImg img{
+                display: block;
+                margin: 0 auto;
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .actorBox {
+                width: 32%;
+                margin: 0 2% 5% 0;
+                position: relative;
+            }
+            .actorBox:nth-of-type(3n) {
+                margin-right: 0;
+            }
+            
+            .actorTxtBox {
+                max-width: 90%;
+                box-sizing: border-box;
+                background: #fff;
+                filter: drop-shadow(0 5px 5px rgba(0,0,0,0.2));
+                margin: -30px auto;
+                padding: 10% 5%;
+                .actorRole,
+                .actorName,
+                .actorBirthPlace {
+                    font-family: 'Noto Sans', sans-serif;
+                    text-align: center;
+                    letter-spacing: 2px;
+                }
+                .actorRole {
+                    font-size: .9375rem;
+                    font-weight: 600;
+                }
+                .actorName {
+                    font-size: 1.375rem;
+                    margin: 10px auto 12px;
+                }
+                .actorBirthPlace {
+                    color: #7E7E7E;
+                    font-size: .8125rem;
+                    margin-bottom: 22px;
+                }
+
+                .actorTxtSubBox {
+                    .actorButton {
+                        background-color: #000;
+                        color: #fff;
+                        text-align: center;
+                        padding: 3% 0;
+                        border-radius: 5px;
+                        margin-top: 15px;
+                        position: relative;
+                        .actorButtonTxt::before{
+                            width: 100%;
+                            top: 50%;
+                            font-weight: 600;
+                            transform: translate(-50%, -50%);
+                            content: '詳細はこちら';
+                        }
+                        .actorButtonTxt:after {
+                            content: "\f107";
+                            font-weight: 600;
+                            font-family: 'Font Awesome 5 Free';
+                            position: absolute;
+                            right: 10%;
+                            top: 20%;
+                            font-size: 20px;
+                        }
+                        .actorButtonTxt.abOpen:before {
+                            content: '詳細を閉じる';
+                        }
+
+
+                        .actorButtonTxt.abOpen:after {
+                            -webkit-transform: rotate(-180deg);
+                            transform: rotate(-180deg);
+                        }
+                    }
+                }
+            }
+            .actprTxt,
+            .actorTxtSub {
+                letter-spacing: 1px;
+                line-height: 25px;
+            }
+            .actorTxtSub {
+                padding-top: 15px;
+            }
+        }
+    }
+}
+
+
+.comment {
+    margin-bottom: 40px;
+    .commentHeadImg {
+        width: 40%;
+        display: inline-block;
+        vertical-align: top;
+        img {
+            width: 100%;
+        }
+    }
+    .cmtHeadCard {
+        color: #fff;
+        background-color: #000;
+        width: 80%;
+        padding: 7%;
+        box-sizing: border-box;
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 350px;
+        margin-left: -21%;
+        .cmtHeadRole {
+            font-size: 20px;
+        }
+        .cmtHeadName {
+            font-size: 30px;
+            font-weight: bold;
+            margin: 20px 0;
+            letter-spacing: 5px;
+        }
+        .cmtHeadTxt {
+            letter-spacing: 1px;
+            line-height: 35px;
+            font-size: 18px;
+        }
+    }
+
+    .cmtCardWrapper {
+        width: 80%;
+        max-width: 1300px;
+        margin: 60px auto;
+        .cmtCardBox {
+            width: 100%;
+            .cmtCardMenu {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                .cmtCard {
+                    background-color: #fff;
+                    padding: 2%;
+                    width: 32%;
+                    list-style: none;
+                    margin-right: 2%;
+                    margin-bottom: 2%;
+                    box-sizing: border-box;
+                    .cmtCardRole,
+                    .cmtCardName {
+                        text-align: center;
+                    }
+                    .cmtCardRole {
+                        font-size: 15px;
+                        font-weight: bold;
+                        line-height: 25px;
+                    }
+                    .cmtCardName {
+                        font-size: 20px;
+                        font-weight: bold;
+                        padding: 20px 0;
+                    }
+                    .cmtCardTxt {
+                        font-size: 15px;
+                        line-height: 25px;
+                    }
+                }
+                .cmtCard:nth-of-type(3n) {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
+
+.manga {
+    .mangaBoxWrapper {
+        width: 85%;
+        max-width: 1300px;
+        margin: 0 auto 120px;
+        .mangaTable {
+            width: 100%;
+            .mangaBox {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                list-style: none;
+                .mangaList {
+                    width: 32%;
+                    margin: 0 2% 5% 0;
+                    .mangaImgWrapper {
+                        width: 100%;
+                        img {
+                            width: 100%;
+                        }
+                    }
+                    .mangaCardWrapper {
+                        width: 90%;
+                        margin: -10% auto;
+                        background-color: #fff;
+                        padding: 8% 5%;
+                        box-sizing: border-box;
+                        filter: drop-shadow(0 5px 5px rgba(0,0,0,0.2));
+                        .mangaVol,
+                        .mangaTitle {
+                            font-weight: bold;
+                            text-align: center;
+                            letter-spacing: 2px;
+                        }
+                        .mangaVol {
+                            font-size: 15px;
+                        }
+                        .mangaTitle {
+                            font-size: 20px;
+                            margin: 20px 0;
+                        }
+                        .mangaTxt {
+                            font-size: 15px;
+                            line-height: 30px;
+                        }
+                        .mangaButton {
+                                background-color: #000;
+                                color: #fff;
+                                text-align: center;
+                                padding: 3% 0;
+                                border-radius: 5px;
+                                margin-top: 15px;
+                                position: relative;
+                                .mangaButtonTxt::before{
+                                    width: 100%;
+                                    top: 50%;
+                                    font-weight: 600;
+                                    transform: translate(-50%, -50%);
+                                    content: '詳しく見る';
+                                }
+                                .mangaButtonTxt:after {
+                                    content: "\f105";
+                                    font-weight: 600;
+                                    font-family: 'Font Awesome 5 Free';
+                                    position: absolute;
+                                    right: 10%;
+                                    top: 20%;
+                                    font-size: 20px;
+                                }
+                        }
+                        
+                    }
+                }
+                .mangaList:nth-of-type(3n) {
+                    margin: 0 0 2% 0;
+                }
+            }
+        }
+    }
+}
+
+.news {
+    width: 85%;
+    max-width: 1200px;
+    margin: 150px auto;
+    .newsWrapper {
+        width: 100%;
+        .newsNav {
+        width: 100%;
+            .newsBox {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                a {
+                    display: contents;
+                }
+                .newsCard {
+                    width: 32%;
+                    margin: 0 2% 2% 0;
+                    position: relative;
+                    background-color: #000;
+                    filter: drop-shadow(0 5px 5px rgba(0,0,0,0.2));
+                    .newsImg {
+                        width: 100%;
+                        height: 100%;
+                        opacity: 0.7;
+                    }
+                    .nCardTxtDay,
+                    .nCardTxtTitle {
+                        color: #fff;
+                        position: absolute;
+                        padding: 25px;
+                        font-weight: bold;
+                        letter-spacing: 2px;
+                        line-height: 20px;
+                    }
+                    .nCardTxtDay {
+                        top: 0;
+                        left: 0;
+                    }
+                    .nCardTxtTitle {
+                        bottom: 0;
+                        right: 0;
+                    }
+                }
+                .newsCard:nth-of-type(3n) {
+                    margin: 0 0 2% 0;
+                }
+                .newsCard:nth-of-type(1) {
+                    background-color: rgba(0,0,0,0.4);
+                    .newsImg {
+                        visibility: hidden;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.contact {
+    width: 80%;
+    max-width: 1300px;
+    margin: 100px auto;
+    .contactWrapper,
+    .contactIn,
+    .contactTitle,
+    .contactSendBtn {
+        width: 100%;
+    }
+    .contactIn,
+    .contactSendBtn {
+        margin-bottom: 60px;
+    }
+    .contactTitle {
+            display: flex;
+            justify-content: space-between;
+            margin: 30px 0;
+            .contactMandatory {
+                color: #fff;
+                background-color: #F75A53;
+                font-size: 10px;
+                padding: 6px 10px;
+            }
+    }
+        .contactTitleName {
+            font-weight: bold;
+            font-size: 20px;
+        }
+    .contactTxtInput {
+            width: 100%;
+            height: 50px;
+            border: none;
+            padding: 0;
+    }
+    .cPurpose,
+    .cContent {
+        .contactTitleName {
+            margin: 30px 0;
+        }
+        label {
+            margin-right: 50px;
+            span {
+                font-weight: bold;
+            }
+        }
+    }
+    .cPurpose {
+        .contactRadioInput {
+            margin: 10px;
+        }
+    }
+
+    .cContent {
+        .contactTxtInput {
+            height: 200px;
+        }
+    }
+
+    .contactSendBtn {
+        background-color: #000;
+        color: #fff;
+        text-align: center; 
+        padding: 20px 0 ;
+        font-weight: bold;
+        letter-spacing: 2px;
+        font-size: 20px;
+        transition: all .3s;
+    }
+    .contactSendBtn:hover {
+        background-color: #fff;
+        color: #000;
+    }
+
+}
+
+
+.archives {
+    width: 70%;
+    max-width: 1200px;
+    margin: 0 auto 200px;
+    .archivesWrapper {
+        width: 100%;
+        .archivesImg {
+            width: 100%;
+        }
+        .archivesCard {
+            width: 90%;
+            margin: -100px auto;
+            padding: 5%;
+            box-sizing: border-box;
+            background-color: #fff;
+            color: #000;
+            filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.2));
+            .archivesTitle,
+            .archivesTxt,
+            .archivesThen {
+                font-family: 'Noto Sans', sans-serif;
+
+            }
+            .archivesTitle {
+                font-size: 1.75rem;
+                text-align: center;
+                padding: 3% 0;
+            }
+            .archivesTxt,
+            .archivesThen {
+                line-height: 25px;
+                font-size: 14px;
+                font-weight: 600;
+                letter-spacing: 1px;
+            }
+            .archivesThen {
+                margin: 20px 0;
+                text-align: right;
+            }
+        }
+    }
+}
